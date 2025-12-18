@@ -1,0 +1,55 @@
+<div class="calculator">
+  <div class="memory-label">Memory: {{ memory }}</div>
+
+  <div class="display">{{ display || "0" }}</div>
+   <!-- Memory Display -->
+
+  <div class="keypad">
+     <!-- MEMORY ROW -->
+    <button class="memory" (click)="press('MC')">MC</button>
+    <button class="memory" (click)="press('MR')">MR</button>
+    <button class="memory" (click)="press('M+')">M+</button>
+    <button class="memory" (click)="press('M-')">M-</button>
+
+
+    <!-- Top Row -->
+    <button (click)="press('%')">%</button>
+    <button (click)="clearEntry()">CE</button>
+    <button (click)="press('C')">C</button>
+    <button (click)="backspace()">⌫</button>
+
+    <!-- Functions -->
+    <button (click)="reciprocal()">1/x</button>
+    <button (click)="press('square')">x²</button>
+    <button (click)="press('sqrt')">²√x</button>
+    <button class="operator" (click)="pressOperator('/')">÷</button>
+
+    <!-- Row 7 8 9 -->
+    <button (click)="press('7')">7</button>
+    <button (click)="press('8')">8</button>
+    <button (click)="press('9')">9</button>
+    <button class="operator" (click)="press('*')">×</button>
+
+    <!-- Row 4 5 6 -->
+    <button (click)="press('4')">4</button>
+    <button (click)="press('5')">5</button>
+    <button (click)="press('6')">6</button>
+    <button class="operator" (click)="press('-')">−</button>
+
+    <!-- Row 1 2 3 -->
+    <button (click)="press('1')">1</button>
+    <button (click)="press('2')">2</button>
+    <button (click)="press('3')">3</button>
+    <button class="operator" (click)="press('+')">+</button>
+
+    <!-- Bottom Row -->
+    <button (click)="press('0')">0</button>
+    <button (click)="press('.')">.</button>
+    <button class="equal" (click)="press('=')">=</button>
+
+  </div>
+</div>
+
+
+
+

@@ -1,0 +1,70 @@
+.calculator {
+  width: 300px;
+  height:510px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 12px;
+  background: #f6f6f6;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+  font-family: Arial, sans-serif;
+}
+
+.memory-label {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.display {
+  width: 250px; 
+  height: 70px;
+  background: #ffffff;
+  border-radius: 10px;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 15px;
+  text-align: right;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+  margin: 20px;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 12px;
+}
+
+button {
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  background: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  transition: 0.1s ease-in-out;
+
+  &:active {
+    transform: scale(0.96);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Operator buttons */
+.operator {
+  background: #dce8ff;
+  font-weight: bold;
+}
+
+/* Memory buttons */
+.memory {
+  background: #ffecc8;
+  font-weight: bold;
+}
+
+/* Equal button (spans 2 columns) */
+.equal {
+  grid-column: span 2;
+  background: #b3ffd1;
+  font-weight: bold;
+}
